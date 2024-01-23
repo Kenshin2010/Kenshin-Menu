@@ -206,7 +206,7 @@ static bool MenDeal = true;
                 ImGui::Checkbox("Hack map", &show_s0);
                 ImGui::Checkbox("AIM xoay 360", &show_s1);
                 ImGui::Checkbox("Cam xa", &show_s2);
-                ImGui::Checkbox("Hide nam", &show_s3);
+                ImGui::Checkbox("An ten", &show_s3);
 
                 ImGui::Text("Telegram: https://t.me/kenshin_map_ios");
 
