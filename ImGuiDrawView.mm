@@ -167,6 +167,9 @@ static bool MenDeal = true;
 
 //Define active function
     static bool show_s0_active = false;
+    static bool show_s1_active = false;
+    static bool show_s2_active = false;
+    static bool show_s3_active = false;
     
         
         if (MenDeal == true) {
@@ -191,18 +194,21 @@ static bool MenDeal = true;
             CGFloat y = (([UIApplication sharedApplication].windows[0].rootViewController.view.frame.size.height) - 300) / 2;
             
             ImGui::SetNextWindowPos(ImVec2(x, y), ImGuiCond_FirstUseEver);
-            ImGui::SetNextWindowSize(ImVec2(200, 150), ImGuiCond_FirstUseEver);
+            ImGui::SetNextWindowSize(ImVec2(500, 400), ImGuiCond_FirstUseEver);
             
             if (MenDeal == true)
             {                
                 ImGui::Begin("Kenshin IOS Menu", &MenDeal);
-                ImGui::Text("Use 3 Fingers Click 3 Times Open Menu\n2 Finger Tap Screen 2 Times Hide Menu\n\nOpen In Lobby");
+                ImGui::Text("Use 3 Fingers Click 3 Times Open Menu\n2 Finger Tap Screen 2 Times Hide Menu\n\nFeature:");
                 
                 ImGui::TableNextColumn();
 
-                ImGui::Checkbox("Map Cheat Enable", &show_s0);
+                ImGui::Checkbox("Hack map", &show_s0);
+                ImGui::Checkbox("AIM xoay 360", &show_s1);
+                ImGui::Checkbox("Cam xa", &show_s2);
+                ImGui::Checkbox("Hide nam", &show_s3);
 
-                ImGui::Text("Contact me on Telegram: @little34306 (%.3f ms/frame (%.1f FPS))\nThis menu support Xina, Dopamine, unc0ver, palera1n\nand Non-jailbreak too!", 500.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+                ImGui::Text("Telegram: https://t.me/kenshin_map_ios");
 
 
                 ImGui::End();
@@ -216,15 +222,15 @@ static bool MenDeal = true;
 //This function below maybe outdated, idk. But it's an example how we can use
     if(show_s0){
         if(show_s0_active == NO){
-            vm_unity(ENCRYPTOFFSET("0x517A154"), strtoul(ENCRYPTHEX("0x360080D2"), nullptr, 0));
-            vm(ENCRYPTOFFSET("0x10517A154"), strtoul(ENCRYPTHEX("0x360080D2"), nullptr, 0));
+            vm_unity(ENCRYPTOFFSET("0x5179308"), strtoul(ENCRYPTHEX("0x360080D2"), nullptr, 0));
+            vm(ENCRYPTOFFSET("0x105179308"), strtoul(ENCRYPTHEX("0x360080D2"), nullptr, 0));
             }
         show_s0_active = YES;
     }
     else{
         if(show_s0_active == YES){
-            vm_unity(ENCRYPTOFFSET("0x517A154"), strtoul(ENCRYPTHEX("0xF60302AA"), nullptr, 0));
-            vm(ENCRYPTOFFSET("0x10517A154"), strtoul(ENCRYPTHEX("0xF60302AA"), nullptr, 0));
+            vm_unity(ENCRYPTOFFSET("0x5179308"), strtoul(ENCRYPTHEX("0xF60302AA"), nullptr, 0));
+            vm(ENCRYPTOFFSET("0x105179308"), strtoul(ENCRYPTHEX("0xF60302AA"), nullptr, 0));
             }
         show_s0_active = NO;
     }

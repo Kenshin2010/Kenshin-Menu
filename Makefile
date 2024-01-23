@@ -1,4 +1,4 @@
-#export THEOS=/var/mobile/theos
+export THEOS=/home/kenshin/theos
 ARCHS = arm64
 #Add arm64e if it needed
 DEBUG = 0
