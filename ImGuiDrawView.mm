@@ -194,12 +194,12 @@ static bool MenDeal = true;
             CGFloat y = (([UIApplication sharedApplication].windows[0].rootViewController.view.frame.size.height) - 300) / 2;
             
             ImGui::SetNextWindowPos(ImVec2(x, y), ImGuiCond_FirstUseEver);
-            ImGui::SetNextWindowSize(ImVec2(500, 400), ImGuiCond_FirstUseEver);
+            ImGui::SetNextWindowSize(ImVec2(350, 250), ImGuiCond_FirstUseEver);
             
             if (MenDeal == true)
             {                
                 ImGui::Begin("Kenshin IOS Menu", &MenDeal);
-                ImGui::Text("Use 3 Fingers Click 3 Times Open Menu\n2 Finger Tap Screen 2 Times Hide Menu\n\nFeature:");
+                ImGui::Text("Nhan 3 ngon tay 2 lan de mo menu\nNhan 2 ngon tay 2 lan de an menu\n\nFeature:");
                 
                 ImGui::TableNextColumn();
 
